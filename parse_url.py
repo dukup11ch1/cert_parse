@@ -7,7 +7,7 @@ class Url:
     def parse_urls(self):
         import re
         regex = re.compile("\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\.zip")
-        exname=regex.findall(self.data)
+        exname=list(set(regex.findall(self.data)))
         return exname
     
     def parse_time(self):
